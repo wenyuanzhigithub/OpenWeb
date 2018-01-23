@@ -30,7 +30,7 @@ if __name__ == '__main__':
             }
             proxies={'https': proip }
             mainurls = ['https://www.cnblogs.com/wenBlog/p/8297100.html',
-                        'http://www.cnblogs.com/wenBlog/p/8193935.html',
+                       
                         'http://www.cnblogs.com/wenBlog/p/7833971.html',
                         'http://www.cnblogs.com/wenBlog/p/7685554.html',
                         'http://www.cnblogs.com/wenBlog/p/7474300.html',
