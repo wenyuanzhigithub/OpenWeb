@@ -62,13 +62,10 @@ if __name__ == "__main__":
     while True:
         try:
             flushFirefox()
-            time.sleep(60)
             flushIE()
-            time.sleep(60)
             flushChrome()
-            time.sleep(60)
             flushEdge()
-            time.sleep(60)
+            
         except  :
             print('程序问题继续执行')
             continue
