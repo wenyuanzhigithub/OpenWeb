@@ -6,7 +6,6 @@ from selenium import webdriver
 
 
 mainurls = ['http://www.cnblogs.com/wenBlog/p/8302903.html',
-    'https://www.cnblogs.com/wenBlog/p/8297100.html',
                         'http://www.cnblogs.com/wenBlog/p/8193935.html',
                         'http://www.cnblogs.com/wenBlog/p/7833971.html',
                         'http://www.cnblogs.com/wenBlog/p/7685554.html',
