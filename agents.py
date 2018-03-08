@@ -497,5 +497,5 @@ AGENTS_ALL = [
     "grub-client-1.5.3; (grub-client-1.5.3; Crawl your own stuff with http://grub.org)",
     "iTunes/4.2 (Macintosh; U; PPC Mac OS X 10.2)",
     "Microsoft URL Control - 6.00.8862",
-    "SearchExpress",
+    "SearchExpress"
 ]
