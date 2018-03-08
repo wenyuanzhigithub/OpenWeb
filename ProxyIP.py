@@ -26,7 +26,6 @@ def get_ip_listi(url, headers):
         proxy_list = []
         time2=  tds[9].text+":00"
         a2time = time.mktime(time.strptime(time2, '%y-%m-%d %H:%M:%S'))
-
         localtime = time.time()
         if  (localtime-a2time) <= 600:
             print str(localtime-a2time)
