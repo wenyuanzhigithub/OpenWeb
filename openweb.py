@@ -7,8 +7,6 @@ from selenium import webdriver
 
 mainurls = ['http://www.cnblogs.com/wenBlog/p/8302903.html']
 
-#driver.maximize_window()  # 最大化浏览器
-#driver.implicitly_wait(8) # 设置隐式时间等待
 def flushEdge():
     for mainurl in mainurls:
         driver = webdriver.Edge()
