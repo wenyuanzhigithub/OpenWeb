@@ -15,7 +15,6 @@ from agents import AGENTS_ALL
 if __name__ == '__main__':
     reload(sys)
     sys.setdefaultencoding("utf-8")
-    # print '\xa0'.decode('utf-8')
     for i in range(10000):
         time.sleep(60)
 
