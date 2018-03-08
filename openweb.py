@@ -5,46 +5,45 @@ import time
 from selenium import webdriver
 
 
-mainurls = ['http://www.cnblogs.com/wenBlog/p/8302903.html',
-                        'http://www.cnblogs.com/wenBlog/p/8193935.html',
-                        'http://www.cnblogs.com/wenBlog/p/7833971.html',
-                        'http://www.cnblogs.com/wenBlog/p/7685554.html',
-                        'http://www.cnblogs.com/wenBlog/p/7474300.html',
-                        'http://www.cnblogs.com/wenBlog/p/7459971.html',
-                        'http://www.cnblogs.com/wenBlog/p/7451696.html',
-                        'http://www.cnblogs.com/wenBlog/p/6888039.html'
-                        ]
+mainurls = ['http://www.cnblogs.com/wenBlog/p/8302903.html']
 
 #driver.maximize_window()  # 最大化浏览器
 #driver.implicitly_wait(8) # 设置隐式时间等待
 def flushEdge():
     for mainurl in mainurls:
-        time.sleep(60)
         driver = webdriver.Edge()
         driver.implicitly_wait(8)
         driver.get(mainurl)
-
+        time.sleep(2)
         driver.quit()
 
 def flushChrome():
+    print 4
     driver = webdriver.Chrome()
-    # driver.maximize_window()  # 最大化浏览器
-    driver.implicitly_wait(8)  # 设置隐式时间等待
+    # driver.maximize_window()  # 最大化浏览器  # 设置隐式时间等待
     for mainurl in mainurls:
-        time.sleep(60)
-        driver.get(mainurl)
-
+        try:
+            driver.implicitly_wait(8)
+            driver.get(mainurl)
+            time.sleep(2)
+        except:
+            print("explore bug")
+            continue
     driver.quit()
 
 def flushIE():
+    print 1
     driver = webdriver.Ie()
     # driver.maximize_window()  # 最大化浏览器# driver.implicitly_wait(8) # 设置隐式时间等待
     for mainurl in mainurls:
-        time.sleep(60)
-        driver.implicitly_wait(8)
-        driver.maximize_window()
-        driver.get(mainurl)
-
+        try:
+            driver.implicitly_wait(8)
+            driver.maximize_window()
+            driver.get(mainurl)
+            time.sleep(2)
+        except:
+            print("explore bug")
+            continue
     driver.quit()
 
 def flushFirefox():
@@ -54,9 +53,8 @@ def flushFirefox():
     for mainurl in mainurls:
         # driver.implicitly_wait(8)
         # driver.maximize_window()
-        time.sleep(60)
         driver.get(mainurl)
-
+        time.sleep(2)
     driver.quit()
 if __name__ == "__main__":
     while True:
